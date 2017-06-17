@@ -3,17 +3,17 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Observable } from 'rxjs/Rx';
 
-import { Person } from '../../models/person';
+import { PeopleRes } from '../../models/peopleres';
 
 @Injectable()
 export class PeopleProvider {
   baseUrl: string = 'http://swapi.co/api/people/';
+  next: any = null;
 
   constructor(public http: Http) { }
 
-  getAll(): Observable<Person[]> {
-    return this.http.get(`${this.baseUrl}`)
-      .map(res => res.json().results);
+  getPeople(postfix: string = ""): Observable<PeopleRes> {
+    return this.http.get(`${this.baseUrl}${postfix}`)
+      .map(res => this.next = res.json())
   }
-
 }

@@ -12,4 +12,12 @@
       {{person.name}}
     </ion-item>
   </ion-list>
+  <div text-center>
+    <button ion-button icon-start *ngIf="previous_url"  (click)="getPrevious()">
+      <ion-icon name="arrow-back"></ion-icon>&nbsp;Previous
+    </button>
+    <button ion-button icon-end *ngIf="next_url" (click)="getNext()">
+      Next&nbsp;<ion-icon name="arrow-forward"></ion-icon>
+    </button>
+  </div>
 </ion-content>
