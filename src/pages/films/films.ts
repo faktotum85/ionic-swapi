@@ -18,8 +18,4 @@ export class FilmsPage {
     })
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad FilmsPage');
-  }
-
 }

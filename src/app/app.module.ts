@@ -5,8 +5,6 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { HttpModule } from '@angular/http';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { FilmsPage } from '../pages/films/films';
 import { PeoplePage } from '../pages/people/people';
 import { StarshipsPage } from '../pages/starships/starships';
@@ -20,8 +18,6 @@ import { StarshipsProvider } from '../providers/starships/starships';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    ListPage,
     FilmsPage,
     PeoplePage,
     StarshipsPage
@@ -34,8 +30,6 @@ import { StarshipsProvider } from '../providers/starships/starships';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    ListPage,
     FilmsPage,
     PeoplePage,
     StarshipsPage
