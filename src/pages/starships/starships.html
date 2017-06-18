@@ -1,0 +1,24 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Starships</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let starship of starships" >
+      {{starship.name}}
+    </ion-item>
+  </ion-list>
+  <div text-center>
+    <button ion-button icon-end *ngIf="previous_url" (click)="getPrevious()">
+      <ion-icon name="arrow-back"></ion-icon>&nbsp;Previous
+    </button>
+    <button ion-button icon-start *ngIf="next_url" (click)="getNext()">
+      Next&nbsp;<ion-icon name="arrow-forward"></ion-icon>
+    </button>
+  </div>
+</ion-content>

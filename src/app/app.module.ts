@@ -9,11 +9,13 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { FilmsPage } from '../pages/films/films';
 import { PeoplePage } from '../pages/people/people';
+import { StarshipsPage } from '../pages/starships/starships';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { FilmsProvider } from '../providers/films/films';
 import { PeopleProvider } from '../providers/people/people';
+import { StarshipsProvider } from '../providers/starships/starships';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { PeopleProvider } from '../providers/people/people';
     HomePage,
     ListPage,
     FilmsPage,
-    PeoplePage
+    PeoplePage,
+    StarshipsPage
   ],
   imports: [
     BrowserModule,
@@ -34,14 +37,16 @@ import { PeopleProvider } from '../providers/people/people';
     HomePage,
     ListPage,
     FilmsPage,
-    PeoplePage
+    PeoplePage,
+    StarshipsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     FilmsProvider,
-    PeopleProvider
+    PeopleProvider,
+    StarshipsProvider
   ]
 })
 export class AppModule {}
